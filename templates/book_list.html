@@ -9,14 +9,14 @@
       <a href="{% url 'users:profile' %}">Profile</a>
     </div>
     <div>
-      <a href="{% url 'bookshelf:shelf-view' %}">Back</a>
+      <a href="{% url 'bookshelf:bookshelf-view' %}">Back</a>
     </div>
     <hr />
       {% if books %}
         <div class="row">
         {% for book in books %}
           <div class="col-12 col-sm-6 col-md-4 col-lg-3" style="text-align: center; margin-top: 2em;">
-            <a href="{% url 'bookshelf:update-book' book.pk %}"><img style="height: 20em;" src="{{ book.image.url }}" /><br />
+            <a href="{% url 'bookshelf:book-update' book.pk %}"><img style="height: 20em;" src="{{ book.image.url }}" /><br />
             <h3>{{ book.title }}</h3></a>
           </div>
         {% endfor %}

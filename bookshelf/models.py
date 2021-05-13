@@ -3,7 +3,7 @@ from django.db import models
 from PIL import Image
 
 
-class Shelf(models.Model):
+class Bookshelf(models.Model):
     name = models.CharField(max_length=30)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 

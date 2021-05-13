@@ -15,7 +15,7 @@
         {{ form|crispy }}
       </fieldset>
       <div class="border-top pt-3">
-        <a class="btn btn-secondary" type="submit">Save</a>
+        <a href="{% url 'users:profile' %}" class="btn btn-secondary" type="submit" role="button">Save</a>
       </div>
     </form>
   </div>

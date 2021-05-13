@@ -1,12 +1,12 @@
 from django.urls import path
 
-from .views import profile, RegisterView, welcome
+from .views import index, profile, RegisterView
 
 app_name = 'users'
 
 
 urlpatterns = [
-    path('', welcome, name="welcome"),
+    path('', index, name="index"),
     path('profile/', profile, name='profile'),
     path('register/', RegisterView.as_view(), name='register'),
 ]

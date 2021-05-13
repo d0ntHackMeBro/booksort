@@ -1,24 +1,17 @@
 from pathlib import Path
 import os
-import environ
 
-env = environ.Env(
-    DEBUG=(bool, False)
-)
+DEBUG = True
 
-#READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', default=False)
-#if READ_DOT_ENV_FILE:
-environ.Env.read_env()
-
-DEBUG = env('DEBUG')
-SECRET_KEY = env('SECRET_KEY')
+# Dev secret key
+SECRET_KEY = 'dev-%#jby%-m7#1i!jr_7bv8l%49%*lsq)8*!%%r$5u77oqz%rdm9'
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-ALLOWED_HOSTS = ['143.110.231.190', '5fc17cd0f861.ngrok.io']
+ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
-    'bookshelves.apps.BookshelvesConfig',
+    'bookshelf.apps.BookshelfConfig',
     'users.apps.UsersConfig',
     'crispy_forms',
     'django.contrib.admin',
@@ -65,12 +58,8 @@ WSGI_APPLICATION = 'book_sort.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env("DB_NAME"),
-        'USER': env("DB_USER"),
-        'PASSWORD': env("DB_PASSWORD"),
-        'HOST': env("DB_HOST"),
-        'POST': env("DB_PORT")
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

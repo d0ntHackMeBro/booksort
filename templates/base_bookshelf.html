@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Definite Dev</title>
+  <title>BookSortofArt: Bookshelf</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<style>
@@ -16,49 +16,52 @@
 </head>
 
 <body>
-<div style="float: left">
-  <a href="{% url 'logout' %}">Logout</a><br />
-  <a href="{% url 'users:profile' %}">Profile</a><br />
-  <a href="{% url 'bookshelf:add-book' %}">Add Book</a><br />
-  <a href="{% url 'bookshelf:book-list' %}">Book List</a></div>
-{% block content %}{% endblock %}
-<div style="text-align: center">
-<svg xmlns="http://www.w3.org/2000/svg" width="570" height="623" viewBox="0 0 570 623" style="margin: 30px auto">
-  <g fill="none">
-    <g transform="translate(1 5)">
-      <rect width="568" height="8.13" x=".5" y=".5" fill="#634C02"/>
-      <path fill="#1E1E1E" d="M568,1 L568,8.13 L1,8.13 L1,1 L568,1 M569,0 L0,0 L0,9.13 L569,9.13 L569,0 Z"/>
-      <g transform="translate(0 100)">
-        <rect width="568" height="8.13" x=".5" y=".5" fill="#634C02"/>
-        <path fill="#1E1E1E" d="M568,1 L568,8.13 L1,8.13 L1,1 L568,1 M569,0 L0,0 L0,9.13 L569,9.13 L569,0 Z"/>
-      </g>
-      <g transform="translate(0 342)">
-        <rect width="568" height="8.13" x=".5" y=".5" fill="#634C02"/>
-        <path fill="#1E1E1E" d="M568,1 L568,8.13 L1,8.13 L1,1 L568,1 M569,0 L0,0 L0,9.13 L569,9.13 L569,0 Z"/>
-      </g>
-      <g transform="translate(0 200)">
-        <rect width="568" height="8.13" x=".5" y=".5" fill="#634C02"/>
-        <path fill="#1E1E1E" d="M568,1 L568,8.13 L1,8.13 L1,1 L568,1 M569,0 L0,0 L0,9.13 L569,9.13 L569,0 Z"/>
-      </g>
-      <g transform="translate(0 544)">
-        <rect width="568" height="8.13" x=".5" y=".5" fill="#634C02"/>
-        <path fill="#1E1E1E" d="M568,1 L568,8.13 L1,8.13 L1,1 L568,1 M569,0 L0,0 L0,9.13 L569,9.13 L569,0 Z"/>
-      </g>
-    </g>
-    <rect width="19" height="622" x=".5" y=".5" fill="#634C02"/>
-    <path fill="#1E1E1E" d="M19,1 L19,622 L1,622 L1,1 L19,1 M20,0 L0,0 L0,623 L20,623 L20,0 Z"/>
-    <g transform="translate(350)">
-      <rect width="19" height="622" x=".5" y=".5" fill="#634C02"/>
-      <path fill="#1E1E1E" d="M19,1 L19,622 L1,622 L1,1 L19,1 M20,0 L0,0 L0,623 L20,623 L20,0 Z"/>
-    </g>
-    <g transform="translate(550)">
-      <rect width="19" height="622" x=".5" y=".5" fill="#634C02"/>
-      <path fill="#1E1E1E" d="M19,1 L19,622 L1,622 L1,1 L19,1 M20,0 L0,0 L0,623 L20,623 L20,0 Z"/>
-    </g>
-  </g>
-</svg>
+  <div style="float: left">
+    <a href="{% url 'logout' %}">Logout</a><br />
+    <a href="{% url 'users:profile' %}">Profile</a><br />
+    <a href="{% url 'bookshelf:book-create' %}">Add Book</a><br />
+    <a href="{% url 'bookshelf:book-list' %}">Book List</a>
+  </div>
 
-</div>
+  {% block content %}{% endblock %}
+
+  <div style="text-align: center">
+    <svg xmlns="http://www.w3.org/2000/svg" width="570" height="623" viewBox="0 0 570 623" style="margin: 30px auto">
+      <g fill="none">
+        <g transform="translate(1 5)">
+          <rect width="568" height="8.13" x=".5" y=".5" fill="#634C02"/>
+          <path fill="#1E1E1E" d="M568,1 L568,8.13 L1,8.13 L1,1 L568,1 M569,0 L0,0 L0,9.13 L569,9.13 L569,0 Z"/>
+          <g transform="translate(0 100)">
+            <rect width="568" height="8.13" x=".5" y=".5" fill="#634C02"/>
+            <path fill="#1E1E1E" d="M568,1 L568,8.13 L1,8.13 L1,1 L568,1 M569,0 L0,0 L0,9.13 L569,9.13 L569,0 Z"/>
+          </g>
+          <g transform="translate(0 342)">
+            <rect width="568" height="8.13" x=".5" y=".5" fill="#634C02"/>
+            <path fill="#1E1E1E" d="M568,1 L568,8.13 L1,8.13 L1,1 L568,1 M569,0 L0,0 L0,9.13 L569,9.13 L569,0 Z"/>
+          </g>
+          <g transform="translate(0 200)">
+            <rect width="568" height="8.13" x=".5" y=".5" fill="#634C02"/>
+            <path fill="#1E1E1E" d="M568,1 L568,8.13 L1,8.13 L1,1 L568,1 M569,0 L0,0 L0,9.13 L569,9.13 L569,0 Z"/>
+          </g>
+          <g transform="translate(0 544)">
+            <rect width="568" height="8.13" x=".5" y=".5" fill="#634C02"/>
+            <path fill="#1E1E1E" d="M568,1 L568,8.13 L1,8.13 L1,1 L568,1 M569,0 L0,0 L0,9.13 L569,9.13 L569,0 Z"/>
+          </g>
+        </g>
+        <rect width="19" height="622" x=".5" y=".5" fill="#634C02"/>
+        <path fill="#1E1E1E" d="M19,1 L19,622 L1,622 L1,1 L19,1 M20,0 L0,0 L0,623 L20,623 L20,0 Z"/>
+        <g transform="translate(350)">
+          <rect width="19" height="622" x=".5" y=".5" fill="#634C02"/>
+          <path fill="#1E1E1E" d="M19,1 L19,622 L1,622 L1,1 L19,1 M20,0 L0,0 L0,623 L20,623 L20,0 Z"/>
+        </g>
+        <g transform="translate(550)">
+          <rect width="19" height="622" x=".5" y=".5" fill="#634C02"/>
+          <path fill="#1E1E1E" d="M19,1 L19,622 L1,622 L1,1 L19,1 M20,0 L0,0 L0,623 L20,623 L20,0 Z"/>
+        </g>
+      </g>
+    </svg>
+
+  </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 
