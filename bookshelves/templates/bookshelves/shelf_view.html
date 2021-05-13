@@ -1,0 +1,11 @@
+{% extends 'bookshelves/shelf_base.html' %}
+{% block content %}
+  <div style="text-align: center">
+    <h1>{{ shelf.name }}</h1>
+    {% if books %}
+      {% for book in books %}
+        <img src="{{ book.image.url }}" style="height: 5em" alt="" />
+      {% endfor %}
+    {% endif %}
+  </div>
+{% endblock content %}

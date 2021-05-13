@@ -1,0 +1,466 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Definite Dev</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+<!--  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">-->
+
+	<style>
+		.book:hover {
+			stroke-width: 2;
+			cursor: pointer;
+		}
+
+        .dev-book {
+          display: inline-block;
+          margin: 5px;
+          min-width: 6px;
+          min-height: 46px;
+          max-width: 36px;
+          max-height: 146px;
+        }
+	</style>
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<div style="text-align: center">
+<svg xmlns="http://www.w3.org/2000/svg" width="570" height="623" viewBox="0 0 570 623" style="margin: 30px auto">
+  <g fill="none">
+    <g transform="translate(1 5)">
+      <rect width="568" height="8.13" x=".5" y=".5" fill="#634C02"/>
+      <path fill="#1E1E1E" d="M568,1 L568,8.13 L1,8.13 L1,1 L568,1 M569,0 L0,0 L0,9.13 L569,9.13 L569,0 Z"/>
+      <g transform="translate(0 100)">
+        <rect width="568" height="8.13" x=".5" y=".5" fill="#634C02"/>
+        <path fill="#1E1E1E" d="M568,1 L568,8.13 L1,8.13 L1,1 L568,1 M569,0 L0,0 L0,9.13 L569,9.13 L569,0 Z"/>
+      </g>
+      <g transform="translate(0 342)">
+        <rect width="568" height="8.13" x=".5" y=".5" fill="#634C02"/>
+        <path fill="#1E1E1E" d="M568,1 L568,8.13 L1,8.13 L1,1 L568,1 M569,0 L0,0 L0,9.13 L569,9.13 L569,0 Z"/>
+      </g>
+      <g transform="translate(0 200)">
+        <rect width="568" height="8.13" x=".5" y=".5" fill="#634C02"/>
+        <path fill="#1E1E1E" d="M568,1 L568,8.13 L1,8.13 L1,1 L568,1 M569,0 L0,0 L0,9.13 L569,9.13 L569,0 Z"/>
+      </g>
+      <g transform="translate(0 544)">
+        <rect width="568" height="8.13" x=".5" y=".5" fill="#634C02"/>
+        <path fill="#1E1E1E" d="M568,1 L568,8.13 L1,8.13 L1,1 L568,1 M569,0 L0,0 L0,9.13 L569,9.13 L569,0 Z"/>
+      </g>
+    </g>
+    <rect width="19" height="622" x=".5" y=".5" fill="#634C02"/>
+    <path fill="#1E1E1E" d="M19,1 L19,622 L1,622 L1,1 L19,1 M20,0 L0,0 L0,623 L20,623 L20,0 Z"/>
+    <g transform="translate(350)">
+      <rect width="19" height="622" x=".5" y=".5" fill="#634C02"/>
+      <path fill="#1E1E1E" d="M19,1 L19,622 L1,622 L1,1 L19,1 M20,0 L0,0 L0,623 L20,623 L20,0 Z"/>
+    </g>
+    <g transform="translate(550)">
+      <rect width="19" height="622" x=".5" y=".5" fill="#634C02"/>
+      <path fill="#1E1E1E" d="M19,1 L19,622 L1,622 L1,1 L19,1 M20,0 L0,0 L0,623 L20,623 L20,0 Z"/>
+    </g>
+    <g stroke="#231F20" transform="translate(371 142)" class="shelf-two-column-one">
+      <rect width="12" height="62" x="14" fill="#E5E5E5" class="book" id="book-11"/>
+      <rect width="4" height="48" x="8" y="14" fill="#BCCBD3" class="book" id="book-10"/>
+      <rect width="6" height="58" y="4" fill="#C0272D" class="book" id="book-9"/>
+    </g>
+    <g stroke="#231F20" transform="translate(21 41.01)" class="shelf-one-column-zero">
+      <rect width="4" height="48" x="68" y="13.99" fill="#BCCBD3" class="book" id="book-8"/>
+      <rect width="4" height="48" x="62" y="13.99" fill="#BCCBD3" class="book" id="book-7"/>
+      <rect width="4" height="48" x="56" y="13.99" fill="#BCCBD3" class="book" id="book-6"/>
+      <rect width="4" height="48" x="50" y="13.99" fill="#BCCBD3" class="book" id="book-5"/>
+      <rect width="6" height="58" x="42" y="3.99" fill="#C0272D" class="book" id="book-4"/>
+      <rect width="12" height="62" x="28" fill="#E5E5E5" class="book" id="book-3"/>
+      <rect width="12" height="62" x="14" fill="#E5E5E5" class="book" id="book-2"/>
+      <rect width="4" height="48" x="8" y="13.99" fill="#BCCBD3" class="book" id="book-1"/>
+	  <rect width="6" height="58" y="3.99" fill="#C0272D" class="book" id="book-0"/>
+    </g>
+  </g>
+</svg>
+
+</div>
+
+<div class="book" style="width: 20px; height: 100px; background-color: #007fff; border: 2px solid grey"></div>
+<a href="#" class="sort">sort</a>
+<hr class="sep">
+<div id="book-shelf-box"></div>
+<div id="book-shelf-box-sorted"></div>
+
+<script src="js/jquery.js"></script>
+<script src="jquery-ui.js"></script>
+
+<!--  <script src="js/vendor/modernizr-3.11.3.min.js"></script>-->
+<!--  <script src="js/app.js"></script>-->
+
+end
+
+  <script>
+
+    $body = $("body");
+    $bookshelf = $("#book-shelf-box");
+    var book_n = document.createElement("div");
+
+    var n = 100;
+
+    var rgb_array = [];
+    var hsl_array = [];
+
+    var color = "";
+
+    var w, h, r, g, b;
+
+    for (var i = 0; i < n; i++) {
+
+      r = getRandomInt(255);
+      //r = 0;
+      g = getRandomInt(255);
+      //g = 0;
+      b = getRandomInt(255);
+
+      rgb_array.push([r, g, b])
+
+
+      //color = "rgb(" + r + "," + g + "," + b + ")";
+      color = rgbToHex( r, g, b);
+
+      w = 2 + (2 * i);
+      h = 10 + (2 * i);
+
+      $bookshelf.append("<div class='dev-book b" + i + "' style='width: " + w + "px; height: " + h + "px; background-color: " + color + "'></div>");
+
+      //console.log(rgbToHsl(r,g,b));
+
+      hsl_array.push( rgbToHsl(r,g,b, i) );
+
+      //console.log(hsl_array);
+
+    }
+    $bookshelf.clone().prop('id','book-shelf2').appendTo( $body );
+
+    //console.log(hsl_array);
+
+    hsl_array.sort(compareThirdColumn);
+
+    console.log(hsl_array);
+
+    for (i = 0; i < hsl_array.length; i++) {
+      $("#book-shelf2 .b"+hsl_array[i][3]).css("border","0px solid black").appendTo("#book-shelf-box-sorted");
+      if (i % 20 === 0) {
+        console.log('hr? ', i);
+        var my_hr = document.createElement("hr");
+        $(my_hr).appendTo("#book-shelf-box-sorted");
+      }
+    }
+
+
+
+   // $bookshelf.append("<div class='dev'></div>");
+	  var bookSortData = {
+	"books": [
+			{
+				"shelf-one-column-zero": [
+				{
+					"id": 0,
+					"isbn": "012345",
+					"title": "Title of a Red Book",
+					"author": "Name of Author",
+					"dimensions": {
+						"height": 58,
+						"spine-width": 6,
+						"book-width": 6
+					},
+					"spine-background": "#C0272D"
+				},
+				{
+					"id": 1,
+					"isbn": "007700",
+					"title": "Title of Book Two",
+					"author": "Name of Author Two",
+					"dimensions": {
+						"height": 48,
+						"spine-width": 4,
+						"book-width": 6
+					},
+					"spine-background": "#BCCBD3"
+				},
+				{
+					"id": 2,
+					"isbn": "987654",
+					"title": "Title of Book Three",
+					"author": "Name of Three",
+					"dimensions": {
+						"height": 62,
+						"spine-width": 12,
+						"book-width": 6
+					},
+					"spine-background": "#E5E5E5"
+				},
+				{
+					"id": 3,
+					"isbn": "987654",
+					"title": "Title of Book Three",
+					"author": "Name of Three",
+					"dimensions": {
+						"height": 62,
+						"spine-width": 12,
+						"book-width": 6
+					},
+					"spine-background": "#E5E5E5"
+				},
+				{
+					"id": 4,
+					"isbn": "007700",
+					"title": "Title of Book Two",
+					"author": "Name of Author Two",
+					"dimensions": {
+						"height": 10,
+						"spine-width": 2,
+						"book-width": 6
+					},
+					"spine-background": "#BCCBD3"
+				},
+				{
+					"id": 5,
+					"isbn": "012345",
+					"title": "Title of Book One",
+					"author": "Name of Author",
+					"dimensions": {
+						"height": 10,
+						"spine-width": 2,
+						"book-width": 6
+					},
+					"spine-background": "#C0272D"
+				},
+				{
+					"id": 6,
+					"isbn": "012345",
+					"title": "Title of Book One",
+					"author": "Name of Author",
+					"dimensions": {
+						"height": 10,
+						"spine-width": 2,
+						"book-width": 6
+					},
+					"spine-background": "#C0272D"
+				},
+				{
+					"id": 7,
+					"isbn": "012345",
+					"title": "Title of Book One",
+					"author": "Name of Author",
+					"dimensions": {
+						"height": 10,
+						"spine-width": 2,
+						"book-width": 6
+					},
+					"spine-background": "#C0272D"
+				},
+				{
+					"id": 8,
+					"isbn": "012345",
+					"title": "Title of Book One",
+					"author": "Name of Author",
+					"dimensions": {
+						"height": 10,
+						"spine-width": 2,
+						"book-width": 6
+					},
+					"spine-background": "#C0272D"
+				}
+			],
+			"shelf-two-column-one": [
+				{
+					"id": 9,
+					"isbn": "012345",
+					"title": "Title of Book One",
+					"author": "Name of Author",
+					"dimensions": {
+						"height": 10,
+						"spine-width": 2,
+						"book-width": 6
+					},
+					"spine-background": "#C0272D"
+				},
+				{
+					"id": 10,
+					"isbn": "007700",
+					"title": "Title of Book Two",
+					"author": "Name of Author Two",
+					"dimensions": {
+						"height": 10,
+						"spine-width": 2,
+						"book-width": 6
+					},
+					"spine-background": "#BCCBD3"
+				},
+				{
+					"id": 11,
+					"isbn": "987654",
+					"title": "Title of Book Three",
+					"author": "Name of Three",
+					"dimensions": {
+						"height": 10,
+						"spine-width": 2,
+						"book-width": 6
+					},
+					"spine-background": "#E5E5E5"
+				}
+			]
+		}
+	]
+};
+
+      $( ".book" ).draggable({
+        addClasses: true
+      });
+
+      function getRandomInt(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+      }
+
+    function componentToHex(c) {
+      var hex = c.toString(16);
+      return hex.length == 1 ? "0" + hex : hex;
+    }
+
+    function rgbToHex(r, g, b) {
+      return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+    }
+
+
+      function rgbToHsl(r, g, b, i) {
+        r /= 255, g /= 255, b /= 255;
+
+        var max = Math.max(r, g, b), min = Math.min(r, g, b);
+        var h, s, l = (max + min) / 2;
+
+        if (max == min) {
+          h = s = 0; // achromatic
+        } else {
+          var d = max - min;
+          s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+
+          switch (max) {
+            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+            case g: h = (b - r) / d + 2; break;
+            case b: h = (r - g) / d + 4; break;
+          }
+
+          h /= 6;
+        }
+
+        return [ h, s, l, i ];
+      }
+
+    function compareFirstColumn(a, b) {
+      if (a[0] === b[0]) {
+        return 0;
+      }
+      else {
+        return (a[0] < b[0]) ? -1 : 1;
+      }
+    }
+
+    function compareSecondColumn(a, b) {
+      if (a[1] === b[1]) {
+        return 0;
+      }
+      else {
+        return (a[1] < b[1]) ? -1 : 1;
+      }
+    }
+
+    function compareThirdColumn(a, b) {
+      if (a[2] === b[2]) {
+        return 0;
+      }
+      else {
+        return (a[2] < b[2]) ? -1 : 1;
+      }
+    }
+
+    function hueSort() {
+      var sortedRgbArr = hsl_array.slice(0, 20);
+
+      sortedRgbArr.sort(function (c1, c2) {
+        // Sort by hue
+        return c1.color[0] - c2.color[0];
+      }).map(function (data) {
+        // Retrieve original RGB color
+        return hsl_array[data.index];
+      });
+      console.log("sortedRgbArr", sortedRgbArr);
+
+      for (var z = 0; z < hsl_array.length; z++) {
+        $("#book-shelf-box-sorted .b" + sortedRgbArr[z][3]).css("border", "0px solid green").appendTo($body);
+      }
+    }
+
+
+    $(".sort").on("click", function(e){
+      e.preventDefault()
+      $("body").find("#book-shelf-box-sorted").clone().prop('id','book-shelf3').css({"margin": "20px auto", "background-color": "#DDD"}).appendTo( $body );
+      var sortedRgbArr = hsl_array.slice(0, 19);
+      sortedRgbArr.sort(compareFirstColumn);
+      console.log(sortedRgbArr);
+      for (var z = 0; z < sortedRgbArr.length; z++) {
+        $("#book-shelf-box-sorted .b" + sortedRgbArr[z][3]).css("border", "0px solid green").appendTo($body);
+      }
+
+
+      var my_hr2 = document.createElement("hr");
+      $(my_hr2).appendTo($body);
+
+      var sortedRgbArr2 = hsl_array.slice(20, 39);
+      sortedRgbArr2.sort(compareFirstColumn);
+      for ( z = 0; z < sortedRgbArr2.length; sortedRgbArr2++) {
+        $("#book-shelf3 .b" + sortedRgbArr2[z][3]).css("border", "0px solid green").appendTo($body);
+      }
+
+      var my_hr3 = document.createElement("hr");
+      $(my_hr3).appendTo($body);
+
+      sortedRgbArr = hsl_array.slice(40, 59);
+      sortedRgbArr.sort(compareFirstColumn);
+      for ( z = 0; z < sortedRgbArr.length; z++) {
+        $("#book-shelf3 .b" + sortedRgbArr[z][3]).css("border", "0px solid green").appendTo($body);
+      }
+
+      var my_hr4 = document.createElement("hr");
+      $(my_hr4).appendTo($body);
+
+      sortedRgbArr = hsl_array.slice(60,79);
+      sortedRgbArr.sort(compareFirstColumn);
+      for ( z = 0; z < sortedRgbArr.length; z++) {
+        $("#book-shelf3 .b" + sortedRgbArr[z][3]).css("border", "0px solid green").appendTo($body);
+      }
+
+      var my_hr4 = document.createElement("hr");
+      $(my_hr4).appendTo($body);
+
+      sortedRgbArr = hsl_array.slice(80,99);
+      sortedRgbArr.sort(compareFirstColumn);
+      for ( z = 0; z < sortedRgbArr.length; z++) {
+        $("#book-shelf3 .b" + sortedRgbArr[z][3]).css("border", "0px solid green").appendTo($body);
+      }
+
+    });
+	  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <div class="content-section">
+    <div class="col-8 mx-auto">
+      <div>
+        <a href="{% url 'logout' %}">Logout</a>
+      </div>
+      <div>
+        <a href="{% url 'users:profile' %}">Profile</a>
+      </div>
+      <div>
+        <a href="{% url 'bookshelf:book-list' %}">Back</a>
+      </div>
+      <hr />
+      <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <fieldset class="form-group">
+          <legend class="border-bottom mb-4">Update Book</legend>
+          {{ form|crispy }}
+          <p class="mt-1"><b>Average color:</b> {{ book.spine_color }}</p>
+        </fieldset>
+        <div class="border-top pt-3">
+          <button class="col-12 btn btn-secondary" type="submit">Update</button>
+          <a href="{% url 'bookshelf:delete-book' book.pk %}" class="mt-3 btn btn-danger" role="button">Delete</a>
+        </div>
+      </form>
+    </div>  
+  </div>
+{% endblock content %}

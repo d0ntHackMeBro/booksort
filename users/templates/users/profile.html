@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <header>
+          <a style="float: right" href="{% url 'logout' %}">Logout</a>
+      </header>
+    </div>
+    <div class="row">
+      <h1>Welcome<br />{{ user.username|upper }}!</h1>
+    </div>
+    <hr />
+    <div class="row">
+      <h3>Your bookshelf:</h3>
+      {% if shelf %}
+        <a href="{% url 'bookshelf:shelf-view' %}">{{ shelf.name }}</a>
+        <a href="{% url 'bookshelf:update-shelf' shelf.pk %}"><sub>Rename bookshelf</sub></a>
+      {% else %}
+        <a href="{% url 'bookshelf:name-shelf' %}">Name your bookshelf</a>
+      {% endif %}
+    </div>
+  </div>
+{% endblock content %}
