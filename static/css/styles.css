@@ -1,0 +1,47 @@
+body {
+    background-color: #fff4ea;
+}
+
+header div a {
+    color: #fff4ea;
+    font-weight: bold;
+    text-decoration: None;
+}
+
+header div a:hover {
+    color: #e6dcd3;
+    font-weight: bold;
+    text-decoration: None;
+}
+
+header div a:active a:visited {
+    color: #fff4ea;
+    font-weight: bold;
+    text-decoration: None;
+}
+
+.blue-btn {
+    background: #0096d1;
+    color: #fff4ea;
+}
+
+.gray-btn {
+    background: #8c8680;
+    color: #fff4ea;
+}
+
+.blue-btn:hover {
+    background: #008bc2;
+    color: #e6dcd3;
+}
+
+.gray-btn:hover {
+    background: #807a74;
+    color: #e6dcd3;
+}
+
+.header {
+    background: #0096d1;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}

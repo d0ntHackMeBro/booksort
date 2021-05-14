@@ -1,28 +1,29 @@
 {% extends 'base.html' %}
+
 {% load crispy_forms_tags %}
+
 {% block content %}
+
   <div class="content-section">
-    <div>
-      <a href="{% url 'logout' %}">Logout</a>
-    </div>
-    <div>
-      <a href="{% url 'users:profile' %}">Profile</a>
-    </div>
-    <div>
-      <a href="{% url 'bookshelf:bookshelf-view' %}">Back</a>
-    </div>
-    <hr />
+
+    <div class="col-8 mx-auto mt-4">
       {% if books %}
         <div class="row">
         {% for book in books %}
           <div class="col-12 col-sm-6 col-md-4 col-lg-3" style="text-align: center; margin-top: 2em;">
-            <a href="{% url 'bookshelf:book-update' book.pk %}"><img style="height: 20em;" src="{{ book.image.url }}" /><br />
-            <h3>{{ book.title }}</h3></a>
+            <a class="text-decoration-none" href="{% url 'bookshelf:book-update' book.pk %}"><img class="mb-2" style="height: 20em;" src="{{ book.image.url }}" /><br />
+            <h4 class="border-top">{{ book.title }}</h4></a>
           </div>
         {% endfor %}
         </div>
       {% else %}
         <p>No books added</p>
       {% endif %}
+      <div class="mt-5">
+        <a href="{% url 'bookshelf:bookshelf-view' %}" class="btn blue-btn" role="button">Back</a>
+      </div>
+    </div>
+
   </div>
+
 {% endblock content %}

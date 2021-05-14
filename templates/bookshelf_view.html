@@ -3,10 +3,12 @@
 {% block content %}
 
   <div style="text-align: center">
-    <h1>{{ bookshelf.name }}</h1>
+    <h1 class="text-uppercase">{{ bookshelf.name }}</h1>
+  </div>
+  <div class="row d-flex justify-content-center">
     {% if books %}
       {% for book in books %}
-        <img src="{{ book.image.url }}" style="height: 5em" alt="" />
+        <img src="{{ book.image.url }}" style="height: 5em; width: auto" alt="" />
       {% endfor %}
     {% endif %}
   </div>

@@ -1,23 +1,57 @@
 {% extends 'base.html' %}
+
 {% block content %}
-  <div class="container">
-    <div class="row">
-      <header>
-          <a style="float: right" href="{% url 'logout' %}">Logout</a>
-      </header>
+
+  <div class="content-section">
+
+    <!-- Mobile profile -->
+    <div class="d-md-none">
+      <div class="container">
+        <div class="row border-bottom mt-4">
+          <h1>Welcome<br />{{ user.username|upper }}!</h1>
+        </div>
+        <div class="row mt-4">
+          <p class="h4 mb-1">Your bookshelf:</p>
+        </div>
+        <div class="row">
+          {% if bookshelf %}
+            <div class="col-6">
+              <a class="text-decoration-none" href="{% url 'bookshelf:bookshelf-view' %}">{{ bookshelf.name }}</a>
+            </div>
+            <div class="col-12">
+              <a href="{% url 'bookshelf:bookshelf-update' bookshelf.pk %}" class="w-100 btn blue-btn mt-4" role="button">Rename bookshelf</a>
+            </div>
+          {% else %}
+            <a href="{% url 'bookshelf:bookshelf-create' %}">Name your bookshelf</a>
+          {% endif %}
+        </div>
+      </div>
     </div>
-    <div class="row">
-      <h1>Welcome<br />{{ user.username|upper }}!</h1>
+
+    <!-- Desktop profile -->
+    <div class="d-none d-md-block">
+      <div class="col-8 mx-auto">
+        <div class="row border-bottom mt-4">
+          <h1>Welcome<br />{{ user.username|upper }}!</h1>
+        </div>
+        <div class="row mt-4">
+          <p class="h3 mb-1">Your bookshelf:</p>
+        </div>
+        <div class="row">
+          {% if bookshelf %}
+            <div class="col-6">
+              <a class="text-decoration-none" href="{% url 'bookshelf:bookshelf-view' %}">{{ bookshelf.name }}</a>
+            </div>
+            <div class="col-12">
+              <a href="{% url 'bookshelf:bookshelf-update' bookshelf.pk %}" class="btn blue-btn mt-4" role="button">Rename bookshelf</a>
+            </div>
+          {% else %}
+            <a href="{% url 'bookshelf:bookshelf-create' %}">Name your bookshelf</a>
+          {% endif %}
+        </div>
+      </div>
     </div>
-    <hr />
-    <div class="row">
-      <h3>Your bookshelf:</h3>
-      {% if bookshelf %}
-        <a href="{% url 'bookshelf:bookshelf-view' %}">{{ bookshelf.name }}</a>
-        <a href="{% url 'bookshelf:bookshelf-update' bookshelf.pk %}"><sub>Rename bookshelf</sub></a>
-      {% else %}
-        <a href="{% url 'bookshelf:bookshelf-create' %}">Name your bookshelf</a>
-      {% endif %}
-    </div>
+
   </div>
+
 {% endblock content %}

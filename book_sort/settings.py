@@ -1,14 +1,22 @@
 from pathlib import Path
+import environ
 import os
 
-DEBUG = True
 
-# Dev secret key
-SECRET_KEY = 'dev-%#jby%-m7#1i!jr_7bv8l%49%*lsq)8*!%%r$5u77oqz%rdm9'
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
+
+# reading .env file
+environ.Env.read_env()
+
+DEBUG = False
+SECRET_KEY = env("SECRET_KEY")
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '143.110.231.190']
 
 INSTALLED_APPS = [
     'bookshelf.apps.BookshelfConfig',
@@ -55,6 +63,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'book_sort.wsgi.application'
+
 
 DATABASES = {
     'default': {

@@ -1,22 +1,48 @@
 {% extends 'base.html' %}
+
 {% load crispy_forms_tags %}
+
 {% block content %}
+
   <div class="content-section">
-    <div>
-      <a href="{% url 'logout' %}">Logout</a>
-    </div>
-    <div>
-      <a href="{% url 'users:profile' %}">Back</a>
-    </div>
-    <form method="POST">
-      {% csrf_token %}
-      <fieldset class="form-group">
-        <legend class="border-bottom mb-4">Name Bookshelf</legend>
-        {{ form|crispy }}
-      </fieldset>
-      <div class="border-top pt-3">
-        <button class="btn btn-secondary" type="submit">Submit</button>
+
+    <!-- Mobile bookshelf create -->
+    <div class="d-md-none">
+      <div class="container">
+        <form method="POST">
+          {% csrf_token %}
+          <fieldset class="form-group">
+            <legend class="border-bottom mt-4 mb-4">Name Bookshelf</legend>
+            {{ form|crispy }}
+          </fieldset>
+          <div class="border-top pt-3">
+            <button class="w-100 btn blue-btn mb-2" type="submit">Submit</button>
+            <a href="{% url 'users:profile' %}" class="w-100 btn gray-btn" role="button">Back</a>
+          </div>
+        </form>
       </div>
-    </form>
+    </div>
+
+    <!-- Desktop bookshelf create -->
+    <div class="d-none d-md-block">
+      <div class="col-8 mx-auto">
+        <div class="row">
+          <div class="col-6">
+            <form method="POST">
+              {% csrf_token %}
+              <fieldset class="form-group">
+                <legend class="border-bottom mt-4 mb-4">Name Bookshelf</legend>
+                {{ form|crispy }}
+              </fieldset>
+              <div class="form-group pt-3">
+                <a href="{% url 'users:profile' %}" class="btn gray-btn" role="button">Back</a>
+                <button class="btn blue-btn" type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 {% endblock content %}

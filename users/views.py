@@ -10,7 +10,7 @@ def index(request):
     if request.user.is_authenticated:
         return redirect('users:profile')
     else:
-        return render(request, 'index.html')
+        return redirect('users:register')
 
 
 @login_required
